@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    <style>
+        .admin-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(to right, #5c6bc0, #512da8);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .admin-button:hover {
+            background: linear-gradient(to right, #512da8, #5c6bc0);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<!-- Add this right after the <body> tag and before the container div -->
+<body>
+    <a href="admin/login.php" class="admin-button">Admin Panel</a>
+    
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form action="processLogin.php" method="POST">
+                <h1>Log In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <select name="role" placeholder="Select your role" class="select">
+                    <option value="">Select your role</option>
+                    <option value="buyer">Buyer</option>
+                    <option value="seller">Seller</option>
+                </select>
+                <a href="#">Forget Your Password?</a>
+                <button>Log In</button>
+                <p class="redirect-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <a href="signup.html"><button class="hidden">Sign Up</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
