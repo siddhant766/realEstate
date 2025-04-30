@@ -50,7 +50,7 @@ A full-featured real estate management platform that connects buyers and sellers
 
 1. **Clone the Repository**
    ```bash
-   git clone [your-repository-url]
+   git clone [https://github.com/siddhant766/realEstate/edit/main/README.md]
    cd [project-directory]
    ```
 
